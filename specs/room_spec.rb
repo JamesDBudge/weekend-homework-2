@@ -57,5 +57,14 @@ class RoomTest < Minitest::Test
     assert_equal(1, @small_room.guests.length)
   end
 
+  def test_can_guests_pay_for_room
+    @guest = Guest.new("Jamie", "It's a Long Way to the Top", 25.00)
+    @room1.add_guest(@guest)
+    assert_equal(15.00, @guest.cash)
+  end
+
+
+
+
 
 end
