@@ -63,6 +63,11 @@ class RoomTest < Minitest::Test
     assert_equal(15.00, @guest.cash)
   end
 
+  def test_guest_too_poor
+    @guest = Guest.new("Stephen", "Moves Like Jagger", 5.00)
+    @room1.add_guest(@guest)
+    assert_equal(0, @room1.guests.length)
+  end
 
 
 

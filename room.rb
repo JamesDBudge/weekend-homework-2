@@ -15,8 +15,8 @@ class Room
   end
 
   def add_guest(guest)
-    guest.cash -= @room_fee
-    @guests << guest if @guests.length < capacity
+    guest.cash -= @room_fee if guest.cash > @room_fee
+    @guests << guest if @guests.length < capacity && guest.cash > @room_fee
   end
 
   def remove_guest
