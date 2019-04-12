@@ -69,7 +69,11 @@ class RoomTest < Minitest::Test
     assert_equal(0, @room1.guests.length)
   end
 
-
+  def test_room_tracks_spend
+    @guest = Guest.new("Jamie", "It's a Long Way to the Top", 25.00)
+    @room1.add_guest(@guest)
+    assert_equal(10.00, @room1.tab)
+  end
 
 
 end
