@@ -28,6 +28,11 @@ class RoomTest < Minitest::Test
     assert_equal(10.00, @room1.room_fee)
   end
 
+  def test_add_song_to_room_playlist
+    @new_song = Song.new("Loco", 3.50)
+    @room1.add_song_to_playlist(@new_song)
+    assert_equal(@new_song, @room1.playlist.last)
+  end
 
 
 
