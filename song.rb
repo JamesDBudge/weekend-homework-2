@@ -2,9 +2,8 @@ class Song
 
   attr_reader :name, :price
 
-def initialize(name, price)
+def initialize(name)
   @name = name
-  @price = price
 end
 
 

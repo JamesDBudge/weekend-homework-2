@@ -6,9 +6,9 @@ require_relative('../song.rb')
 class SongTest < Minitest::Test
 
   def setup
-    @song1 = Song.new("Flower of Scotland", 1.00)
-    @song2 = Song.new("Tragedy", 2.00)
-    @song3 = Song.new("Power of Love", 5.00)
+    @song1 = Song.new("Flower of Scotland")
+    @song2 = Song.new("Tragedy")
+    @song3 = Song.new("Power of Love")
 
 
   end

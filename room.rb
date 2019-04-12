@@ -15,13 +15,13 @@ class Room
   end
 
   def add_guest(guest)
-    @guests << guest
+    @guests << guest if @guests.length < capacity
   end
 
   def remove_guest
     @guests.pop
   end
-  
+
 
 
 
