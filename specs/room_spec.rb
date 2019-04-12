@@ -3,6 +3,7 @@ require('minitest/rg')
 
 require_relative('../room.rb')
 require_relative('../song.rb')
+require_relative('../guest.rb')
 
 class RoomTest < Minitest::Test
 
@@ -34,7 +35,18 @@ class RoomTest < Minitest::Test
     assert_equal(@new_song, @room1.playlist.last)
   end
 
+  def test_add_guest_to_room
+    @guest = Guest.new("Andrew", "YMCA", 30.00)
+    @room1.add_guest(@guest)
+    assert_equal(1, @room1.guests.length)
+  end
 
+  def test_remove_guest
+    @guest = Guest.new("Andrew", "YMCA", 30.00)
+    @room1.add_guest(@guest)
+    @room1.remove_guest()
+    assert_equal(0, @room1.guests.length)
+  end
 
 
 
