@@ -1,0 +1,14 @@
+class Guest
+
+
+
+
+
+
+
+
+
+
+
+
+end
